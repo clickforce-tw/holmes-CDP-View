@@ -16,5 +16,11 @@
     "nuxt": "^3.0.0",
     "vitest": "^0.28.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "pinia": "^2.0.29"
+  },
+  "overrides": {
+    "vue": "latest"
+  }
 }
