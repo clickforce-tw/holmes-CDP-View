@@ -6,11 +6,12 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest --run --reporter verbose --globals",
+    "test": "vitest run --coverage",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.2.0",
+    "@vitest/coverage-c8": "^0.28.1",
     "autoprefixer": "^10.4.13",
     "jsdom": "^21.1.0",
     "nuxt": "^3.0.0",
