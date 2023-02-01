@@ -1,26 +1,52 @@
 <template>
-  <div :class="['flex',layout === 'col'? 'flex-col items-start' : 'justify-between items-center',{'opacity-[0.5]':disabled}]">
-    <label :class="[' text-secondary-2 text-[16px]',layout === 'col'? 'mb-[22px]' : '']">{{
-    label }}<span class="text-primary_1-100" v-show="required">*</span></label>
+  <div
+    :class="[
+      'flex',
+      layout === 'col'
+        ? 'flex-col items-start'
+        : 'justify-between items-center',
+      { 'opacity-[0.5]': disabled },
+    ]"
+  >
+    <label
+      :class="[
+        ' text-secondary-2 text-[16px]',
+        layout === 'col' ? 'mb-[22px]' : '',
+      ]"
+      >{{ label
+      }}<span v-show="required" class="text-primary_1-100">*</span></label
+    >
     <div class="flex items-center gap-[10px]">
       <label class="toggle">
-        <input type="checkbox" :name="`switch-${label}`" v-model="inputVal" :checked="switchStatus" :disabled="disabled">
+        <input
+          v-model="inputVal"
+          type="checkbox"
+          :name="`switch-${label}`"
+          :checked="switchStatus"
+          :disabled="disabled"
+        />
         <span class="slider"></span>
       </label>
-      <div :class="['text-[16px] font-bold transition-all ease-out',switchStatus ? 'text-primary_1-100':'text-secondary-2']">
-        {{
-        status }}</div>
+      <div
+        :class="[
+          'text-[16px] font-bold transition-all ease-out',
+          switchStatus ? 'text-primary_1-100' : 'text-secondary-2',
+        ]"
+      >
+        {{ status }}
+      </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits, computed } from "vue";
+import { defineProps, defineEmits, computed } from 'vue'
 
-const emit = defineEmits(["update:switchStatus"]);
+const emit = defineEmits(['update:switchStatus'])
 const props = defineProps({
   label: {
     type: String,
+    default: '',
   },
   required: {
     type: Boolean,
@@ -34,27 +60,28 @@ const props = defineProps({
   },
   layout: {
     type: String,
-    default: "col",
+    default: 'col',
   },
   customOptions: {
     type: Array,
-    default: () => ["關", "開"],
+    default: () => ['關', '開'],
   },
-});
+})
 
 const inputVal = computed({
   get: () => props.switchStatus,
-  set: (val) => emit("update:switchStatus", val),
-});
+  set: (val) => emit('update:switchStatus', val),
+})
 
 const status = computed(() => {
-  if (props.switchStatus) {
-    return props.customOptions[1];
-  }
-  if (!props.switchStatus) {
-    return props.customOptions[0];
-  }
-});
+  // if (props.switchStatus) {
+  //   return props.customOptions[1]
+  // }
+  // if (!props.switchStatus) {
+  //   return props.customOptions[0]
+  // }
+  return props.customOptions[props.switchStatus ? 1 : 0]
+})
 </script>
 
 <style scoped>
@@ -90,7 +117,7 @@ const status = computed(() => {
 }
 
 .toggle .slider::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -5px;
   left: -5px;

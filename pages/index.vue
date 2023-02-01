@@ -4,7 +4,7 @@
     <div class="grid grid-rows-2 grid-cols-2">
       <div class="w-[150px] bg-slate-200">
         <Switch
-          v-model:switchStatus="switchStatus"
+          v-model:switchStatus="status"
           :label="'開關'"
           :required="false"
         />
@@ -50,12 +50,13 @@ interface AdultArray {
 }
 
 const pageName = ref<string>('元件測試:')
-const switchStatus = ref<Boolean>(true)
+const status = ref<Boolean>(true)
 const adultArray = ref<AdultArray[]>([
   { value: 0, label: '僅接受一般訂單' },
   { value: 1, label: '僅接受成人訂單' },
   { value: 2, label: '接受一般與成人訂單' },
 ])
+console.log(count, adultArray)
 </script>
 
 <style></style>
