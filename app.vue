@@ -13,6 +13,6 @@ export default {
       // you can return the whole store instance to use it in the template
       store,
     }
-  }
+  },
 }
 </script>

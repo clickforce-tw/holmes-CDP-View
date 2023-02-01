@@ -1,25 +1,31 @@
 import { setActivePinia, createPinia } from 'pinia'
+import {
+  describe,
+  test,
+  expect,
+  beforeAll,
+  beforeEach,
+  afterEach,
+} from 'vitest'
 import { useCounterStore } from '../stores/example'
-import {describe,test,expect,beforeAll,beforeEach,afterEach}from 'vitest';
 
-beforeAll(()=> {
+beforeAll(() => {
   setActivePinia(createPinia())
 })
 
-describe('useExampleStore',()=> {
-  let store : ReturnType<typeof useCounterStore>;
+describe('useExampleStore', () => {
+  let store: ReturnType<typeof useCounterStore>
   beforeEach(() => {
-    store = useCounterStore();
+    store = useCounterStore()
   })
   afterEach(() => {
-    store.$reset();
+    store.$reset()
   })
-  test("references a store", () => {
-    expect(store).toBeDefined();
-  });
+  test('references a store', () => {
+    expect(store).toBeDefined()
+  })
 
   // test("has empty Array on init", () => {
   //   expect(store.items).toStrictEqual([]);
   // });
-
-});
+})
