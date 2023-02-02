@@ -14,9 +14,9 @@ export const useCounterStore = defineStore('counter', {
 })
 
 export const useComputerStore = defineStore('computer', () => {
-  const count = ref<number>(1)
+  const piniaCount = ref<number>(0)
 
   return {
-    count,
+    piniaCount,
   }
 })
