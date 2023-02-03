@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <NuxtPage />
 </template>
 <script>
 import { useCounterStore } from '@/stores/example'
