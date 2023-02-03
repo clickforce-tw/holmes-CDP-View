@@ -1,25 +1,30 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    node: true,
-  },
-  extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'plugin:prettier/recommended',
-    'prettier',
-  ],
-  parserOptions: {
-    ecmaVersion: 13,
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
-  },
-  plugins: ['prettier', 'vue', '@typescript-eslint'],
+  extends: ['@nuxtjs/eslint-config-typescript', 'plugin:prettier/recommended'],
   rules: {
-    'no-unused-expressions': 'off',
-    'vue/no-v-html': 'off',
-    'no-console': ['error', { allow: ['warn', 'error'] }],
-    'no-tabs': ['error', { allowIndentationTabs: true }],
-    'no-unexpected-multiline': 'error',
+    'vue/multi-word-component-names': 'off',
+    'no-tabs': 'off',
+    'import/prefer-default-export': 0,
+    'consistent-return': 'off',
+    'no-alert': 'off',
+    'no-console': 'off',
+    'import/no-unresolved': 'off',
+    'import/extensions': 'off',
+    'global-require': 0,
+    'max-len': ['error', { code: 500 }],
+    'no-param-reassign': [
+      'error',
+      {
+        props: true,
+        ignorePropertyModificationsFor: [
+          'e', // for e.returnvalue
+          'ctx', // for Koa routing
+          'req', // for Express requests
+          'request', // for Express requests
+          'res', // for Express responses
+          'response', // for Express responses
+          'state', // for vuex state
+        ],
+      },
+    ],
   },
 }
