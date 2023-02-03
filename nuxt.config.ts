@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css'],
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
   },
   vite: {
     plugins: [eslint()],

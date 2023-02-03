@@ -4,7 +4,11 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['@nuxtjs/eslint-config-typescript', 'plugin:prettier/recommended'],
+  extends: [
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:prettier/recommended',
+    'prettier',
+  ],
   parserOptions: {
     ecmaVersion: 13,
     parser: '@typescript-eslint/parser',
