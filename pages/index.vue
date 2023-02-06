@@ -2,7 +2,7 @@
   <h1 class="bg-gradient-to-r from-[#DD2476] to-[#FF7527]">CDP環境設定</h1>
   <ExampleComponent></ExampleComponent>
   {{ pageName }}
-  <!-- <div>
+  <div>
     {{ pageName }}
     <div class="grid grid-cols-2 grid-rows-2">
       <div class="w-[150px] bg-slate-200">
@@ -56,7 +56,7 @@
       </div>
       <Calculator />
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script lang="ts" setup>

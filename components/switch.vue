@@ -4,10 +4,9 @@
       'flex',
       layout === 'col'
         ? 'flex-col items-start'
-        : 'justify-between items-center',
+        : 'items-center justify-between',
       { 'opacity-[0.5]': disabled },
-    ]"
-  >
+    ]">
     <label
       :class="[
         ' text-secondary-2 text-[16px]',
@@ -23,16 +22,14 @@
           type="checkbox"
           :name="`switch-${label}`"
           :checked="switchStatus"
-          :disabled="disabled"
-        />
+          :disabled="disabled" />
         <span class="slider"></span>
       </label>
       <div
         :class="[
           'text-[16px] font-bold transition-all ease-out',
           switchStatus ? 'text-primary_1-100' : 'text-secondary-2',
-        ]"
-      >
+        ]">
         {{ status }}
       </div>
     </div>
