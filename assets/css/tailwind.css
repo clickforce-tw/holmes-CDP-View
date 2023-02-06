@@ -2,59 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  font-family: 'Roboto', sans-serif;
+}
 /* Desktop Styles (1920🖥️🖥️🖥️) */
 /* regular */
 .extra-title1-regular{ 
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
   line-height: 140%;
 }
 .extra-title2-regular{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 140%;
 }
 .extra-title3-regular{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
   line-height: 140%;
 }
 .header1-regular{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 140%;
 }
 .data-title-regular{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 140%;
 }
 .sub-title1-regular{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
 }
 .sub-title2-regular{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
 }
 .notice-regular{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -62,56 +57,48 @@
 }
 /* bold */
 .extra-title1-bold{ 
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
   line-height: 140%;
 }
 .extra-title2-bold{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 140%;
 }
 .extra-title3-bold{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 140%;
 }
 .header1-bold{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 140%;
 }
 .data-title-bold{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 140%;
 }
 .sub-title1-bold{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 140%;
 }
 .sub-title2-bold{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 140%;
 }
 .notice-bold{
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
