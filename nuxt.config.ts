@@ -1,10 +1,16 @@
 import eslint from 'vite-plugin-eslint'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ['~/assets/css/main.css'],
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
+  css: ['~/assets/css/tailwind.css'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
+    '@vueuse/nuxt',
+  ],
+  components: true,
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
   },
   vite: {
     plugins: [eslint()],

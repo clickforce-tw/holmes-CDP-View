@@ -1,61 +1,7 @@
 <template>
-  <div>
-    {{ pageName }}
-    <div class="grid grid-rows-2 grid-cols-2">
-      <div class="w-[150px] bg-slate-200">
-        <Switch
-          v-model:switchStatus="status"
-          :label="'開關'"
-          :required="false"
-        />
-      </div>
-      <div>
-        <h2>Computer:</h2>
-        <p>pinia:{{ piniaCount }}</p>
-        <input
-          v-model="currentCount"
-          class="w-4/6 border-2 text-right focus:outline-none"
-          type="text"
-          disabled
-        />
-        <div class="bg-gray-200 w-4/6">
-          <div class="grid grid-rows-3 grid-cols-4 gap-5 text-center">
-            <span
-              v-for="(count, index) in counts"
-              :key="index"
-              class="p-1 cursor-pointer"
-              @click="addCount(count)"
-              >{{ Number(count) }}</span
-            >
-            <span class="p-1 cursor-pointer" @click="operationProcess('add')"
-              >+</span
-            >
-            <span
-              class="p-1 cursor-pointer"
-              @click="operationProcess('substract')"
-              >-</span
-            >
-            <span
-              class="p-1 cursor-pointer"
-              @click="operationProcess('multiply')"
-              >*</span
-            >
-            <span class="p-1 cursor-pointer" @click="operationProcess('divide')"
-              >/</span
-            >
-            <span class="p-1 cursor-pointer" @click="addDot">.</span>
-            <span class="p-1 cursor-pointer" @click="equal">=</span>
-            <span class="p-1 cursor-pointer" @click="percentage">%</span>
-            <span class="p-1 cursor-pointer" @click="setNegativeOrPositive"
-              >+/-</span
-            >
-            <span class="p-1 cursor-pointer" @click="clear">C</span>
-          </div>
-        </div>
-      </div>
-      <Calculator />
-    </div>
-  </div>
+  <h1>CDP環境設定</h1>
+  <ExampleComponent></ExampleComponent>
+  {{ pageName }}
 </template>
 
 <script lang="ts" setup>
@@ -156,5 +102,3 @@ watch(currentCount, (curVal) => {
 
 console.log(piniaCount, adultArray)
 </script>
-
-<style></style>
