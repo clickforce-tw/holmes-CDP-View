@@ -1,7 +1,62 @@
 <template>
-  <h1>CDP環境設定</h1>
+  <h1 class="bg-gradient-to-r from-[#DD2476] to-[#FF7527]">CDP環境設定</h1>
   <ExampleComponent></ExampleComponent>
   {{ pageName }}
+  <!-- <div>
+    {{ pageName }}
+    <div class="grid grid-cols-2 grid-rows-2">
+      <div class="w-[150px] bg-slate-200">
+        <Switch
+          v-model:switchStatus="status"
+          :label="'開關'"
+          :required="false" />
+      </div>
+      <div>
+        <h2>Computer:</h2>
+        <p>pinia:{{ piniaCount }}</p>
+        <input
+          v-model="currentCount"
+          class="w-4/6 border-2 text-right focus:outline-none"
+          type="text"
+          disabled />
+        <div class="w-4/6 bg-gray-200">
+          <div class="grid grid-cols-4 grid-rows-3 gap-5 text-center">
+            <span
+              v-for="(count, index) in counts"
+              :key="index"
+              class="cursor-pointer p-1"
+              @click="addCount(count)"
+              >{{ Number(count) }}</span
+            >
+            <span class="cursor-pointer p-1" @click="operationProcess('add')"
+              >+</span
+            >
+            <span
+              class="cursor-pointer p-1"
+              @click="operationProcess('substract')"
+              >-</span
+            >
+            <span
+              class="cursor-pointer p-1"
+              @click="operationProcess('multiply')"
+              >*</span
+            >
+            <span class="cursor-pointer p-1" @click="operationProcess('divide')"
+              >/</span
+            >
+            <span class="cursor-pointer p-1" @click="addDot">.</span>
+            <span class="cursor-pointer p-1" @click="equal">=</span>
+            <span class="cursor-pointer p-1" @click="percentage">%</span>
+            <span class="cursor-pointer p-1" @click="setNegativeOrPositive"
+              >+/-</span
+            >
+            <span class="cursor-pointer p-1" @click="clear">C</span>
+          </div>
+        </div>
+      </div>
+      <Calculator />
+    </div>
+  </div> -->
 </template>
 
 <script lang="ts" setup>

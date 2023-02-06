@@ -16,17 +16,32 @@ module.exports = {
         error: '#CC1212',
         yellow: '#FFC553',
         white: '#ffffff',
-        primary1: '#DD2476',
-        primary2: '#FF7527',
-        gradient:
-          'linear-gradient(90deg, #DD2476 0%, #FF512F 81.25%, #FF7527 100%)',
-        background1: '#F8F6FB',
-        background2: '#FAFAFA',
-        background3: '#FFFFFF',
-        theme_1: 'rgba(26, 26, 26, 0.9)',
-        theme_2: '#FF7527',
-        theme_3: 'rgba(193, 193, 193, 0.8)',
-        theme_4: '#E7408A',
+        primary: {
+          1: '#DD2476',
+          2: '#FF7527',
+        },
+        gradient: {
+          1: '#DD2476',
+          2: '#FF512F',
+          3: '#FF7527',
+        },
+        background: {
+          1: '#F8F6FB',
+          2: '#FAFAFA',
+          3: '#FFFFFF',
+        },
+        text: {
+          main: '#525252',
+          page_selected: '#FF7527',
+          fillinbox_line: 'rgba(193, 193, 193, 0.8)',
+          drop_down_menu: '#E7408A',
+        },
+        theme: {
+          1: 'rgba(26, 26, 26, 0.9)',
+          2: '#FF7527',
+          3: 'rgba(193, 193, 193, 0.8)',
+          4: '#E7408A',
+        },
         chart_red: {
           100: '#F1076F',
           76: 'rgba(241, 7, 111, 0.76)',
@@ -42,7 +57,12 @@ module.exports = {
           80: 'rgba(82, 160, 252, 0.8)',
           20: 'rgba(82, 160, 252, 0.2)',
         },
-        chart_word: '#F1076F',
+        chart_word: {
+          red: '#DD2476',
+          primary: '#FF7527',
+          blue: '#52A0FC',
+          yellow: '#FFC553',
+        },
       },
     },
     screens: {
