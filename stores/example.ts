@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
 export const useCounterStore = defineStore('counter', {
   state: () => ({ count: 0, name: 'Eduardo' }),
@@ -10,4 +11,12 @@ export const useCounterStore = defineStore('counter', {
       this.count++
     },
   },
+})
+
+export const useComputerStore = defineStore('computer', () => {
+  const piniaCount = ref<number>(0)
+
+  return {
+    piniaCount,
+  }
 })

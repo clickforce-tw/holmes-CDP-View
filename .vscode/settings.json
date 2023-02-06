@@ -21,9 +21,9 @@
   "prettier.jsxSingleQuote": true,
   "prettier.singleAttributePerLine": true,
   "files.eol": "\n",
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  // "[vue]": {
+  //   "editor.defaultFormatter": "octref.vetur"
+  // },
   "vsicons.dontShowNewVersionMessage": true,
   "vetur.format.defaultFormatter.js": "prettier-eslint",
   "vetur.format.defaultFormatter.html": "js-beautify-html",
