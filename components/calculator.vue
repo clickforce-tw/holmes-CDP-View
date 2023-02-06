@@ -6,6 +6,7 @@
       {{ btn }}
     </button>
   </div>
+  <div>test div</div>
 </template>
 
 <script lang="ts" setup>
