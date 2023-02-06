@@ -1,62 +1,95 @@
 <template>
-  <h1 class="extra-title1 bg-gradient-to-r from-[#DD2476] to-[#FF7527]">
+  <h1
+    class="extra-title1 bg-gradient-to-r from-[#DD2476] to-[#FF7527] text-center text-background-1">
     CDP環境設定
   </h1>
   <ExampleComponent></ExampleComponent>
   {{ pageName }}
-  <div>
-    {{ pageName }}
-    <div class="grid grid-cols-2 grid-rows-2">
-      <div class="w-[150px] bg-slate-200">
-        <Switch
-          v-model:switchStatus="status"
-          :label="'開關'"
-          :required="false" />
-      </div>
-      <div>
-        <h2>Computer:</h2>
-        <p>pinia:{{ piniaCount }}</p>
-        <input
-          v-model="currentCount"
-          class="w-4/6 border-2 text-right focus:outline-none"
-          type="text"
-          disabled />
-        <div class="w-4/6 bg-gray-200">
-          <div class="grid grid-cols-4 grid-rows-3 gap-5 text-center">
-            <span
-              v-for="(count, index) in counts"
-              :key="index"
-              class="cursor-pointer p-1"
-              @click="addCount(count)"
-              >{{ Number(count) }}</span
-            >
-            <span class="cursor-pointer p-1" @click="operationProcess('add')"
-              >+</span
-            >
-            <span
-              class="cursor-pointer p-1"
-              @click="operationProcess('substract')"
-              >-</span
-            >
-            <span
-              class="cursor-pointer p-1"
-              @click="operationProcess('multiply')"
-              >*</span
-            >
-            <span class="cursor-pointer p-1" @click="operationProcess('divide')"
-              >/</span
-            >
-            <span class="cursor-pointer p-1" @click="addDot">.</span>
-            <span class="cursor-pointer p-1" @click="equal">=</span>
-            <span class="cursor-pointer p-1" @click="percentage">%</span>
-            <span class="cursor-pointer p-1" @click="setNegativeOrPositive"
-              >+/-</span
-            >
-            <span class="cursor-pointer p-1" @click="clear">C</span>
-          </div>
+  <div class="grid grid-cols-2 grid-rows-2">
+    <div class="w-[150px] bg-slate-200">
+      <Switch v-model:switchStatus="status" :label="'開關'" :required="false" />
+    </div>
+    <div>
+      <h2>Computer:</h2>
+      <p>pinia:{{ piniaCount }}</p>
+      <input
+        v-model="currentCount"
+        class="w-4/6 border-2 text-right focus:outline-none"
+        type="text"
+        disabled />
+      <div class="w-4/6 bg-gray-200">
+        <div class="grid grid-cols-4 grid-rows-3 gap-5 text-center">
+          <span
+            v-for="(count, index) in counts"
+            :key="index"
+            class="cursor-pointer p-1"
+            @click="addCount(count)"
+            >{{ Number(count) }}</span
+          >
+          <span class="cursor-pointer p-1" @click="operationProcess('add')"
+            >+</span
+          >
+          <span
+            class="cursor-pointer p-1"
+            @click="operationProcess('substract')"
+            >-</span
+          >
+          <span class="cursor-pointer p-1" @click="operationProcess('multiply')"
+            >*</span
+          >
+          <span class="cursor-pointer p-1" @click="operationProcess('divide')"
+            >/</span
+          >
+          <span class="cursor-pointer p-1" @click="addDot">.</span>
+          <span class="cursor-pointer p-1" @click="equal">=</span>
+          <span class="cursor-pointer p-1" @click="percentage">%</span>
+          <span class="cursor-pointer p-1" @click="setNegativeOrPositive"
+            >+/-</span
+          >
+          <span class="cursor-pointer p-1" @click="clear">C</span>
         </div>
       </div>
-      <Calculator />
+    </div>
+    <Calculator />
+  </div>
+  <h1
+    class="bg-gradient-to-r from-[#DD2476] to-[#FF7527] text-center text-background-1">
+    Typeface
+  </h1>
+  <div class="grid grid-cols-2">
+    <div>
+      <h2>@Regular</h2>
+      <p class="extra-title1-regular">Extra Tittle / Big Number</p>
+      <p class="extra-title2-regular">Extra Tittle 2 / Big Number 2</p>
+      <p class="extra-title3-regular">Popup Tittle / Hello</p>
+      <p class="header1-regular">Header 1</p>
+      <p class="data-title-regular">Data Tittle</p>
+      <p class="sub-title1-regular">
+        Sub Menu Tittle / Body Text / List Tittle Words / Search Words / Filter
+        Words
+      </p>
+      <p class="sub-title2-regular">
+        Sub Menu Tittle / Body Text / List Tittle Words / Search Words / Filter
+        Words
+      </p>
+      <p class="notice-regular">Notice / Page number</p>
+    </div>
+    <div>
+      <h2>@Bold</h2>
+      <p class="extra-title1-bold">Extra Tittle / Big Number</p>
+      <p class="extra-title2-bold">Extra Tittle 2 / Big Number 2</p>
+      <p class="extra-title3-bold">Popup Tittle / Hello</p>
+      <p class="header1-bold">Header 1</p>
+      <p class="data-title-bold">Data Tittle</p>
+      <p class="sub-title1-bold">
+        Sub Menu Tittle / Body Text / List Tittle Words / Search Words / Filter
+        Words
+      </p>
+      <p class="sub-title2-bold">
+        Sub Menu Tittle / Body Text / List Tittle Words / Search Words / Filter
+        Words
+      </p>
+      <p class="notice-bold">Notice / Page number</p>
     </div>
   </div>
 </template>
