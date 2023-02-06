@@ -1,5 +1,7 @@
 <template>
-  <h1 class="bg-gradient-to-r from-[#DD2476] to-[#FF7527]">CDP環境設定</h1>
+  <h1 class="extra-title1 bg-gradient-to-r from-[#DD2476] to-[#FF7527]">
+    CDP環境設定
+  </h1>
   <ExampleComponent></ExampleComponent>
   {{ pageName }}
   <div>

@@ -71,6 +71,10 @@ module.exports = {
       xl: '1366px',
       xxl: '1920px',
     },
+    fontFamily: {
+      Roboto: 'Roboto',
+      NotoSans: 'Noto Sans',
+    },
   },
   plugins: [],
 }
