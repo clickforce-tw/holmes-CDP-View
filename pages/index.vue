@@ -6,6 +6,7 @@
   <ExampleComponent></ExampleComponent>
   {{ pageName }}
   <div class="grid grid-cols-2 grid-rows-2">
+    <BaseButton :color="'gradient'" @update="buttonClick"> 確認 </BaseButton>
     <div class="w-[150px] bg-slate-200">
       <Switch v-model:switchStatus="status" :label="'開關'" :required="false" />
     </div>
@@ -189,6 +190,10 @@ watch(currentCount, (curVal) => {
     currentCount.value = curVal.slice(0, 12)
   }
 })
+
+const buttonClick = (a: String) => {
+  console.log(a)
+}
 
 console.log(piniaCount, adultArray)
 </script>
