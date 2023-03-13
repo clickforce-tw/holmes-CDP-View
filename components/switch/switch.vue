@@ -71,12 +71,6 @@ const inputVal = computed({
 })
 
 const status = computed(() => {
-  //   if (props.switchStatus) {
-  //     return props.customOptions[1]
-  //   }
-  //   if (!props.switchStatus) {
-  //     return props.customOptions[0]
-  //   }
   return props.customOptions[props.switchStatus ? 1 : 0]
 })
 </script>
